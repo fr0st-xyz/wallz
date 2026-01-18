@@ -5,7 +5,7 @@
 #
 # A script to rename wallpapers in a directory.
 #
-# Author: @fr0st-iwnl
+# Author: @fr0st.xyz
 #=================================================================
 # Repository: https://github.com/fr0st-iwnl/wallz
 #-----------------------------------------------------------------
@@ -84,11 +84,13 @@ def rename_wallpapers():
     print(f"{Colors.GREEN}✨ Welcome! This tool helps organize your wallpapers{Colors.RESET}")
     print(f"{Colors.GREEN}   by giving them clean, numbered names.{Colors.RESET}")
     print()
+    print(f"{Colors.YELLOW}⚠️ Important: Run this script ONLY in the folder that contains{Colors.RESET}")
+    print(f"{Colors.YELLOW}   your wallpaper packs. Otherwise it may rename other files.{Colors.RESET}")
+    print()
     
     print(f"{Colors.BLUE}📋 What this does:{Colors.RESET}")
     print(f"   • Finds all images in your folders")
     print(f"   • Renames them: 01, 02, 03... + folder name")
-    print(f"   • Keeps your files safe (no data lost)")
     print(f"   • Example: 'random_pic.jpg' → '01. [Folder_Name]'")
     print()
     
@@ -139,7 +141,9 @@ def rename_wallpapers():
         
         # extract current numbers from filenames to preserve order if possible
         numbered_files = []
+        unnumbered_files = []
         current_files_map = {}  # map of file paths to their current filenames
+        max_existing_digits = 0
         
         for file_path in image_files:
             filename = os.path.basename(file_path)
@@ -148,20 +152,50 @@ def rename_wallpapers():
             # try to extract existing number from the filename
             match = re.match(r'^(\d+)[.\s]', filename)
             if match:
-                number = int(match.group(1))
+                number_str = match.group(1)
+                number = int(number_str)
+                max_existing_digits = max(max_existing_digits, len(number_str))
+                numbered_files.append((number, file_path))
             else:
-                # if no number, assign a large number to put it at the end
-                number = 9999
-            numbered_files.append((number, file_path))
+                unnumbered_files.append(file_path)
         
-        # sort files by their extracted numbers
-        numbered_files.sort()
+        # sort files by their extracted numbers, then filename for stability
+        numbered_files.sort(key=lambda x: (x[0], current_files_map[x[1]].lower()))
+        unnumbered_files.sort(key=lambda p: current_files_map[p].lower())
+        
+        # determine padding using total count and existing filenames
+        padding = max(padding, max_existing_digits)
+        
+        # compact numbering only from the first gap (keep early correct numbers)
+        target_numbers = {}
+        expected = 1
+        renumber_from = None
+        
+        for idx, (number, file_path) in enumerate(numbered_files):
+            if number == expected:
+                target_numbers[file_path] = number
+                expected += 1
+                continue
+            renumber_from = idx
+            break
+        
+        if renumber_from is None:
+            renumber_from = len(numbered_files)
+        
+        next_number = expected
+        for number, file_path in numbered_files[renumber_from:]:
+            target_numbers[file_path] = next_number
+            next_number += 1
+        
+        for file_path in unnumbered_files:
+            target_numbers[file_path] = next_number
+            next_number += 1
         
         # create new filenames with proper padding
         target_filenames = {}
-        for i, (_, file_path) in enumerate(numbered_files, 1):
+        for file_path, number in target_numbers.items():
             extension = os.path.splitext(current_files_map[file_path])[1]
-            new_filename = f"{i:0{padding}d}. {directory}{extension}"
+            new_filename = f"{number:0{padding}d}. {directory}{extension}"
             target_filenames[file_path] = new_filename
         
         # track if any files in this directory need renaming
