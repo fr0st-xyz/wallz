@@ -43,14 +43,13 @@ All of our themes are listed below.
 [![Catppuccin-Latte](https://placehold.co/130x30/dd7878/eff1f5?text=Catppuccin+Latte&font=Oswald)](https://github.com/fr0st-iwnl/wallz/tree/main/Catppuccin%20Latte)
 [![Catppuccin-Mocha](https://placehold.co/130x30/b4befe/11111b?text=Catppuccin+Mocha&font=Oswald)](https://github.com/fr0st-iwnl/wallz/tree/main/Catppuccin%20Mocha)
 [![Dracula](https://placehold.co/130x30/2B2E3B/607988?text=Dracula&font=Oswald)](https://github.com/fr0st-iwnl/wallz/tree/main/Dracula)
-[![Edge-Runner](https://placehold.co/130x30/fada16/000000?text=Edge+Runner&font=Oswald)](https://github.com/fr0st-iwnl/wallz/tree/main/Edge%20Runner)
+[![Quiet-Sun](https://placehold.co/130x30/fada16/000000?text=Quiet+Sun&font=Oswald)](https://github.com/fr0st-iwnl/wallz/tree/main/Quiet%20Sun)
 [![Frosted-Glass](https://placehold.co/130x30/7ed6ff/1e4c84?text=Frosted+Glass&font=Oswald)](https://github.com/fr0st-iwnl/wallz/tree/main/Frosted%20Glass)
 [![Graphite-Mono](https://placehold.co/130x30/222222/D9D9D9?text=Graphite+Mono&font=Oswald)](https://github.com/fr0st-iwnl/wallz/tree/main/Graphite%20Mono)
 [![Green-Lush](https://placehold.co/130x30/89E574/153550?text=Green+Lush&font=Oswald)](https://github.com/fr0st-iwnl/wallz/tree/main/Green%20Lush)
 [![Greenify](https://placehold.co/130x30/0e120f/295233?text=Greenify&font=Oswald)](https://github.com/fr0st-iwnl/wallz/tree/main/Greenify)
 [![Gruvbox-Retro](https://placehold.co/130x30/353842/ADAE89?text=Gruvbox+Retro&font=Oswald)](https://github.com/fr0st-iwnl/wallz/tree/main/Gruvbox%20Retro)
 [![Lucid-Aurora](https://placehold.co/130x30/7aa2f7/24283b?text=Lucid+Aurora&font=Oswald)](https://github.com/fr0st-iwnl/wallz/tree/main/Lucid%20Aurora)
-[![Mac-OS](https://placehold.co/130x30/857990/B9D7EA?text=Mac+OS&font=Oswald)](https://github.com/fr0st-iwnl/wallz/tree/main/Mac%20OS)
 [![Material-Sakura](https://placehold.co/130x30/f2e9e1/b4637a?text=Material+Sakura&font=Oswald)](https://github.com/fr0st-iwnl/wallz/tree/main/Material%20Sakura)
 [![Monokai](https://placehold.co/130x30/2d2a2e/f92672?text=Monokai&font=Oswald)](https://github.com/fr0st-iwnl/wallz/tree/main/Monokai)
 [![Nordic-Blue](https://placehold.co/130x30/7B98B8/CAD7E1?text=Nordic+Blue&font=Oswald)](https://github.com/fr0st-iwnl/wallz/tree/main/Nordic%20Blue)
@@ -63,7 +62,7 @@ All of our themes are listed below.
 [![Solar-Pulse](https://placehold.co/130x30/FFA500/0A0A0A?text=Solar+Pulse&font=Oswald)](https://github.com/fr0st-iwnl/wallz/tree/main/Solar%20Pulse)
 [![Solarized-Dark](https://placehold.co/130x30/044655/259E9C?text=Solarized+Dark&font=Oswald)](https://github.com/fr0st-iwnl/wallz/tree/main/Solarized%20Dark)
 [![Synth-Wave](https://placehold.co/130x30/495495/ff7edb?text=Synth+Wave&font=Oswald)](https://github.com/fr0st-iwnl/wallz/tree/main/Synth%20Wave)
-[![Windows-11](https://placehold.co/130x30/277AE6/D2DCFD?text=Windows+11&font=Oswald)](https://github.com/fr0st-iwnl/wallz/tree/main/Windows%2011)
+[![System UI](https://placehold.co/130x30/277AE6/D2DCFD?text=System+UI&font=Oswald)](https://github.com/fr0st-iwnl/wallz/tree/main/System%20UI)
 
   </td></tr></table>
 </div>
